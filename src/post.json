@@ -1,0 +1,90 @@
+{
+    "openapi":"3.0.0",
+    "info":{
+             "title":"",
+             "summary":"This is post API for Books",
+             "version":"1.0.0"
+           },
+    "servers":[
+        {
+            "url":"https//abc.example.com/getAllBooks"
+        }
+    ],
+    "paths":{
+        "/getAllBooks":{
+            "post":{
+                "summary":"",
+                "description":"",
+                "requestBody":{
+                    "required":true,
+                    "content":{
+                        "application/json":{
+                            "schema":{
+                                "type":"object",
+                                "properties":{
+                                    "name":{
+                                      "type":"string",
+                                      "description":"test"
+                                    },
+                                    "email":{
+                                       "type":"string",
+                                       "description":"Testing"
+                                    },
+                                    "password":{
+                                        "type":"string",
+                                        "description":"Just for Testing"
+                                    }
+                                },
+                                "required":[
+                                    "name",
+                                    "email",
+                                    "password"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "responses":{
+                "description":"Just for testing",
+                "200":{
+                    "content":{
+                        "application/json":{
+                            "schema":{
+                                "type":"object",
+                                "properties":{
+                                    "name":{
+                                      "type":"string",
+                                      "description":"test"
+                                    },
+                                    "email":{
+                                       "type":"string",
+                                       "description":"Testing"
+                                    },
+                                    "password":{
+                                        "type":"string",
+                                        "description":"Just for Testing"
+                                    }
+                                },
+                                "required":[
+                                    "name",
+                                    "email",
+                                    "password"
+                                ]
+                            }
+                        }
+                    }
+                  },
+                "400":{
+                   "description":"Bad Request"
+                },
+                "401":{
+                   "description":"unauthorized"
+                },
+                "500":{
+                   "description":"internal server error"
+                }
+            }
+        }
+    }
+}
+}
